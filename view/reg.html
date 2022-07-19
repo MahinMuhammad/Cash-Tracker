@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>username</title>
+		<title>Signup</title>
 	</head>
 	<style>
 		body 
@@ -10,26 +10,39 @@
 		}
 	</style>
 	<body>
-		<form method="post" action="../control/loginCheck.php" enctype="">
+		<form method="post" action="../control/regCheck.php" enctype="">
 			<fieldset align="center">
-				<legend>LOGIN</legend>
+				<legend>REGISTRATION</legend>
 				<table align="center">
+					<tr>
+						<td>Name</td>
+						<td><input type="text" name="name" value=""><br></td>
+					</tr>
+
 					<tr>
 						<td>User Name</td>
 						<td><input type="text" name="userName" value=""><br></td>
 					</tr>
+
 					<tr>
 						<td>Password</td>
 						<td><input type="password" name="password" value=""><br></td>
 					</tr>
+
+					<tr>
+						<td>Confirm Password</td>
+						<td><input type="password" name="passwordConf" value=""><br></td>
+					</tr>
+
 					<tr>
 						<td></td>
 						<td>
-							<input type="submit" name="submit" value="Login">
-							<a href="reg.html"> Register </a>
+							<input type="submit" name="submit" value="Register">
+							<a href="login.html"> Login </a> 
 						</td>
 					</tr>
-				</table>						 
+				</table>			 			 			 			 
+							
 			</fieldset>
 		</form>
 	</body>
