@@ -14,9 +14,9 @@
         }
     }
 
-    function regi($user){
+    function regis($user){
         $conn = getConnection();
-		$sql = "insert into users values('{$user['username']}', password='{$user['password']})'";
+		$sql = "insert into userTab values('{$user['username']}', '{$user['name']}', '{$user['pass']}')";
         if(mysqli_query($conn, $sql)){
             return true;
         }else{
