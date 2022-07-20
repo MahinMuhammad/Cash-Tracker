@@ -14,7 +14,7 @@
 		if(login($userName, $password))
 		{
 			header('location: ../view/Home.php');
-			setcookie('status', 'true', time()+3600, '/');
+			setcookie('status', $userName, time()+3600, '/');
 		}
 		else
 		{
