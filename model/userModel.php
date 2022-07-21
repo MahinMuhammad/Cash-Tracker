@@ -49,6 +49,30 @@
         return $value['RealName'];
     }
 
+    function changePass($userName, $password, $passwordNew)
+    {
+        $conn = getConnection();
+        $sql = "update userTab set Pass='{$passwordNew}' where UserName='{$userName}' and Pass='{$password}'";
+        if(mysqli_query($conn, $sql))
+        {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    function deleteUser($userName, $password)
+    {
+        $conn = getConnection();
+        $sql = "delete from userTab where UserName='{$userName}' and Pass='{$password}'";
+        if(mysqli_query($conn, $sql))
+        {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     function getAccountList($userName)
     {
         $conn = getConnection();

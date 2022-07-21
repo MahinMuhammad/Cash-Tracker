@@ -23,7 +23,7 @@
             <table align="center" width="100%">
                 <tr align="center">
                     <td><a href='home.php'> CALCULATOR </a></td>
-                    <td><a href='home.php'> SETTINGS </a></td>
+                    <td><a href='Settings.php'> SETTINGS </a></td>
                     <td><a href='home.php'> ABOUT US </a></td>
                     <td><a href='../control/logout.php'> LOGOUT </a></td>
                 </tr>
