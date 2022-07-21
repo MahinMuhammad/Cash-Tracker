@@ -61,6 +61,18 @@
         }
     }
 
+    function changeInfo($userName, $newRealName, $newUserName)
+    {
+        $conn = getConnection();
+        $sql = "update userTab set RealName='{$newRealName}', UserName='{$newUserName}' where UserName='{$userName}'";
+        if(mysqli_query($conn, $sql))
+        {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     function deleteUser($userName, $password)
     {
         $conn = getConnection();

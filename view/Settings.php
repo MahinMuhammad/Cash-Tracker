@@ -34,7 +34,7 @@
                 <table align="center">
                     <tr>
                         <td>Name</td>
-                        <td><input type="text" name="name" value="<?php echo getRealName($_COOKIE['status']); ?>"></td>
+                        <td><input type="text" name="Realname" value="<?php echo getRealName($_COOKIE['status']); ?>"></td>
                     </tr>
                     <tr>
                         <td>User Name</td>
