@@ -30,7 +30,7 @@
             </table>
             <h1>Wellcome <?php require_once "../model/userModel.php"; echo getRealName($_COOKIE['status']);?> </h1>
             <h2>Account List</h2>
-            <form method="post" action="accountCheck.php" enctype="">
+            <form method="post" action="../control/accountCheck.php" enctype="">
                 <table width="150" border="2" align="center">
                     <tr align="center">
                         <td>
@@ -45,7 +45,7 @@
                                     {
                                         for ($i=0; $i < count($list); $i++) 
                                         { 
-                                            echo "<option value=".$list[$i]['AccountId'].">".$list[$i]['AccountName']."</option>";
+                                            echo "<option value='".$list[$i]['AccountId']."'>".$list[$i]['AccountName']."</option>";
                                         } 
                                     }
                                 ?>                         
