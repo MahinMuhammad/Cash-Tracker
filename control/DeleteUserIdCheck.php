@@ -12,7 +12,7 @@
     if($password == null)
 	{
 		echo '<h1>Password Empty!!!</h1>';
-		echo'<br><a href="../view/DeleteAccount.php"> Go Back </a>';
+		echo'<br><a href="../view/DeleteUserId.php"> Go Back </a>';
 	}
 	else
 	{
@@ -23,8 +23,8 @@
 		}
 		else
 		{
-			echo '<h1>Invalid user!!!</h1>';
-			echo'<br><a href="../view/DeleteAccount.php"> Go Back </a>';
+			echo '<h1>Invalid Password!!!</h1>';
+			echo'<br><a href="../view/DeleteUserId.php"> Go Back </a>';
 		}
 	}
 

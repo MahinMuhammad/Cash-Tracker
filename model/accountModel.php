@@ -27,6 +27,46 @@
 		return $value;
 	}
 
+	function getAccountDescription($AccountId)
+	{
+		$conn = getConnection();
+		$sql = "select * from account where AccountId='{$AccountId}'";
+		$result = mysqli_query($conn, $sql);
+		$row = mysqli_fetch_assoc($result);
+		$value = $row['AccountDescription'];
+		return $value;
+	}
+
+	function changeAccountInfo($AccountId, $accName, $accDescription)
+	{
+		$conn = getConnection();
+		$sql = "update account set AccountName='{$accName}', AccountDescription='{$accDescription}' where AccountId='{$AccountId}'";
+		if(mysqli_query($conn, $sql))
+        {
+            return true;
+        }else{
+            return false;
+        }
+	}
+
+	function deleteAccount($userName, $AccountId, $password)
+	{
+		$conn = getConnection();
+		$sqlConf = "select * from userTab where UserName='{$userName}' and Pass='{$password}'";
+		$resultConf = mysqli_query($conn, $sqlConf);
+		$count = mysqli_num_rows($resultConf);
+
+        if($count >0)
+        {
+            $sql = "delete from account where AccountId='{$AccountId}' and UserName='{$userName}'";
+            $result = mysqli_query($conn, $sql);
+            return true;
+        }else{
+            return false;
+        }
+		
+	}
+
 	function getBalance($AccountId)
 	{
 		$conn = getConnection();

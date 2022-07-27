@@ -24,7 +24,7 @@
             <legend>SETTINGS</legend>
             <table align="center" width="100%">
                 <tr align="center">
-                    <td><a href='DeleteAccount.php'> DELETE ACCOUT </a></td>
+                    <td><a href='DeleteUserId.php'> DELETE ID </a></td>
                     <td><a href='ChangePassword.php'> CHANGE PASSWORD </a></td>
                     <td><a href='home.php'> GO BACK </a></td>
                 </tr>

@@ -5,12 +5,16 @@
         header('location: login.html');
     }
 
+    if(!isset($_COOKIE['account']))
+    {
+        header('location: home.php');
+    }
 ?>
 
 <html>
-<head>
-    <title>Delete Account</title>
-</head>
+    <head>
+        <title>Delete Transaction Account</title>
+    </head>
     <style>
         body 
         {
@@ -19,9 +23,9 @@
         }
     </style>
     <body>
-        <form method="post" action="../control/DeleteAccountCheck.php" enctype=""> 
+        <form method="post" action="../control/DeleteTransAccCheck.php" enctype="">
             <fieldset align=center>
-                <legend>DELETE ACCOUNT</legend>
+                <legend>Delete Transaction Account</legend>
                 <table align="center">
                     <tr>
                         <td>Password</td>
@@ -31,7 +35,7 @@
                         <td></td>
                         <td>
                             <input type="submit" name="submit" value="Delete">
-                            <a href="Settings.php"> ABORT </a> 
+                            <a href="accountSetting.php"> ABORT </a> 
                         </td>
                     </tr>
                 </table>
@@ -39,3 +43,12 @@
         </form>
     </body>
 </html>
+
+
+
+
+
+
+
+
+

@@ -31,8 +31,8 @@
 			<table align="center" width="100%">
                 <tr align="center">
                     <td width="300"><a href='account.php'> NEW TRANSACTION </a></td>
-                    <td><a href='account.php'> SETTINGS </a></td>
                     <td><a href='account.php'> ABOUT US </a></td>
+                    <td><a href='accountSetting.php'> SETTINGS </a></td>
                     <td><a href='home.php'> GO BACK </a></td>
                 </tr>
             </table>
