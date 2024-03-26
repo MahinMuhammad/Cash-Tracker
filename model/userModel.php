@@ -53,7 +53,8 @@
     {
         $conn = getConnection();
         $sql = "update userTab set Pass='{$passwordNew}' where UserName='{$userName}' and Pass='{$password}'";
-        if(mysqli_query($conn, $sql))
+        mysqli_query($conn, $sql);
+        if(mysqli_affected_rows($conn))
         {
             return true;
         }else{
@@ -65,7 +66,8 @@
     {
         $conn = getConnection();
         $sql = "update userTab set RealName='{$newRealName}', UserName='{$newUserName}' where UserName='{$userName}'";
-        if(mysqli_query($conn, $sql))
+        mysqli_query($conn, $sql);
+        if(mysqli_affected_rows($conn))
         {
             return true;
         }else{
@@ -77,7 +79,8 @@
     {
         $conn = getConnection();
         $sql = "delete from userTab where UserName='{$userName}' and Pass='{$password}'";
-        if(mysqli_query($conn, $sql))
+        mysqli_query($conn, $sql);
+        if(mysqli_affected_rows($conn))
         {
             return true;
         }else{
